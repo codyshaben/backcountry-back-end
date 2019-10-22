@@ -10,4 +10,5 @@ module.exports = {
     // getAllTrails(){
     //     return knex('trails')
     // }
+
 }
