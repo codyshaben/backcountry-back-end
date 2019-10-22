@@ -21,7 +21,6 @@ const findByToken = (token) => {
     .then((data) => data.rows[0])
 }
 
-
 const hashPassword = (password) => {
     return new Promise((resolve, reject) =>
       bcrypt.hash(password, 10, (err, hash) => {

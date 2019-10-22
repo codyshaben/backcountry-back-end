@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const users = require('./api/users')
-
+const trails = require('./api/trails.js')
 const User = require('./models/user.js')
 
 const app = express();
@@ -19,6 +19,7 @@ app.use(cookieParser());
 app.post('/signup', User.signup)
 app.post('/signin', User.signin)
 app.use('/api/users', users)
+app.use('/api/trails', trails)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

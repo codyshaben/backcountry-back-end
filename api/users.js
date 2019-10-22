@@ -3,14 +3,13 @@ const router = express.Router()
 const queries = require('../db/queries')
 
 router.get('/', (request, response) => {
-    queries.getAll().then(users => {
+    queries.getAllUsers().then(users => {
         response.json(users)
     })
 })
 
-
 router.get('/:id', (request, response, next) => {
-    queries.getOne(request.params.id).then(user => {
+    queries.getOneUser(request.params.id).then(user => {
         if(user) {
             response.json(user)
         } else {
@@ -19,9 +18,4 @@ router.get('/:id', (request, response, next) => {
     })
 })
   
-
-
-
-
-
 module.exports = router

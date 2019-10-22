@@ -1,10 +1,13 @@
 const knex = require('./knex')
 
 module.exports = {
-    getAll(){
+    getAllUsers(){
         return knex('users')
     },
-    getOne(id){
+    getOneUser(id){
         return knex('users').where('id', id).first()
-    }
+    },
+    // getAllTrails(){
+    //     return knex('trails')
+    // }
 }
