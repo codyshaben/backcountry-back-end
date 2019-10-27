@@ -1,6 +1,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('trails', (table) => {
         table.increments('id')
+        table.integer('trail_id')
         table.text('name')
         table.text('location')
         table.text('summary')
