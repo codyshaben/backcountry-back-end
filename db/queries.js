@@ -18,5 +18,5 @@ module.exports = {
     },
     createTrail(trail){
         return knex('trails').insert(trail, '*')
-    }
+    },    
 }

@@ -14,11 +14,9 @@ request('https://www.powderproject.com/data/get-trails?lat=40.0274&lon=-105.2519
     body.trails.forEach(trail => {
       allTrails.push(trail) 
     });
-    console.log(allTrails)
 })
 
 router.get("/", (request, response) => {
-  console.log(request.body)
     response.send( allTrails )
 })
 
